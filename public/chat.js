@@ -16,6 +16,22 @@ let pfpUrl = '';
 let cropper;
 let lastUser = '';
 
+// Function to retrieve user information from local storage
+function retrieveUserInfo() {
+  const storedUsername = localStorage.getItem('username');
+  const storedPfpUrl = localStorage.getItem('pfpUrl');
+  if (storedUsername && storedPfpUrl) {
+    username = storedUsername;
+    pfpUrl = storedPfpUrl;
+    setupContainer.classList.add('hidden');
+    chatContainer.classList.remove('hidden');
+    socket.emit('user joined', username);
+  }
+}
+
+// Call the function to retrieve user information
+retrieveUserInfo();
+
 pfpFileInput.addEventListener('change', function(e) {
   const file = e.target.files[0];
   if (file) {
@@ -72,6 +88,9 @@ setupForm.addEventListener('submit', async function(e) {
     const result = await response.json();
     if (result.success) {
       pfpUrl = result.url;
+      // Save username and pfpUrl in local storage
+      localStorage.setItem('username', username);
+      localStorage.setItem('pfpUrl', pfpUrl);
       setupContainer.classList.add('hidden');
       chatContainer.classList.remove('hidden');
       socket.emit('user joined', username);
