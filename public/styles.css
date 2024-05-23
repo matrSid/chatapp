@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    color: #e0e0e0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #setup-container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #setup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #setup-form input,
+  #setup-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background: #333;
+    color: #e0e0e0;
+  }
+  
+  #setup-form button {
+    border: none;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  #setup-form button:hover {
+    background: #218838;
+  }
+  
+  #pfp-preview {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #chat-container {
+    width: 80%;
+    max-width: 600px;
+    background: #1e1e1e;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  #messages {
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-start;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .message img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .message .content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 50px); /* Adjust width to accommodate the image */
+  }
+  
+  .message .username {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .message .text {
+    white-space: pre-wrap; /* Ensure the message text wraps within the rectangle */
+    word-break: break-word; /* Ensure long words break and wrap correctly */
+  }
+  
+  #form {
+    display: flex;
+  }
+  
+  #input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background: #333;
+    color: #e0e0e0;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background: #218838;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
+  
